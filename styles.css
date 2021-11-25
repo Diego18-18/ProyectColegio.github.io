@@ -1,0 +1,333 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f1f1f1;
+    color: black;
+    background-color: #f1f1f1;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Navegation */
+.nav-main {
+    background: #f1f1f1;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 20px 0;
+    position: fixed;
+}
+
+.nav-logo {
+    width: 90px;
+}
+
+/* NAV LEFT */
+.nav-main ul {
+    display: flex;
+}
+
+.nav-main ul li {
+    padding: 10px;
+}
+
+.nav-main ul li a {
+    padding: 6px;
+}
+
+.nav-main ul li a:hover {
+    border-bottom: 2px solid black;
+}
+
+.nav-main ul.nav-menu {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.menu-btn {
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 30px;
+    display: none;
+}
+
+.menu-btn-b {
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    right: 95%;
+    z-index: 2;
+    display: none;
+}
+
+/* BIENVENIDA */
+
+.bienvenida {
+    width: 100%;
+    height: 700px;
+    background: url('./Imagenes/Foto-banner.jpg') no-repeat center center/cover;
+    padding: 75px;
+    margin-top: 80px;
+    margin-bottom: -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #727272;
+    color: #ffffff;
+    font-size: 25px;
+    border: 0 1px solid #fff;
+}
+
+.btn:hover {
+    opacity: .7;
+}
+
+/* ARTICULOS */
+.articulos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 0 25px 40px 25px;
+}
+
+.articulos article {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.articulos img {
+    padding: 20px 20px 0 20px;
+    width: 100%;
+    height: 600px;
+}
+
+.articulos a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.articulos a:hover {
+    text-decoration: underline;
+}
+
+/* CARDS BANNER ONE */
+.cards-banner-one {
+    width: 100%;
+    height: 350px;
+    background: url('./Imagenes/banner-one.jpg') no-repeat center center/cover;
+    margin-bottom: 40px;
+}
+
+.cards-banner-one .contenido {
+    width: 40%;
+    padding: 90px 0 0 30px;
+    color: #ffffff;
+}
+
+.cards-banner-one p,
+.cards-banner-one h2 {
+    margin: 10px 0 20px 0;
+}
+
+/* SOCIAL */
+.social {
+    margin: 50px;
+}
+
+.social p {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links a {
+    margin: 0 30px;
+}
+
+.links a i {
+    font-size: 3rem;
+}
+
+/* FOOTER LINKS */
+.footer-links {
+    background: #303030;
+    color: #616161;
+    font-size: 12px;
+    padding: 30px 0;
+}
+
+.footer-links a {
+    color: white;
+    font-size: 16px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer-container ul {
+    margin: 0 auto;
+}
+
+.footer-container ul li {
+    line-height: 2.8;
+    font-size: 15px;
+}
+
+.footer {
+    font-family: "Montserrat", sans-serif;
+    background: #1c1b12;
+    color: white;
+    font-size: 12px;
+    padding: 20px 0;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.footer a {
+    color: white;
+    font-size: 14px;
+}
+
+.footer-logo {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 700px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-menu-lupa {
+        justify-content: center;
+    }
+
+    .nav-main ul.nav-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #2f3640;
+        height: 110%;
+        padding: 30px;
+        transform: translateX(173px);
+        transition: transform .5s ease-in-out;
+        color: white;
+    }
+
+    .nav-main ul.nav-menu.categorías {
+        transform: translateX(20px);
+    }
+
+    .nav-main ul.nav-menu li {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .nav-main ul.nav-menu li a {
+        color: white;
+    }
+
+    /* SEGUNDO BOTOM */
+
+    .menu-btn-b {
+        display: block;
+        position: absolute;
+        background: #2f3640;
+        color: white;
+    }
+
+    /* LUPA */
+
+    .nav-main ul.nav-menu-lupa {
+        margin-right: 80px;
+    }
+
+    .bienvenida {
+        text-align: center;
+    }
+
+    .articulos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .articulos img {
+        height: 300px;
+    }
+
+    .cards-banner-one .contenido,
+    .cards-banner-two .contenido
+    {
+        width: 80%;
+    }
+
+    .footer-links .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .articulos {
+        grid-template-columns: 1fr;
+    }
+
+    .articulos img {
+        height: 270px;
+    }
+
+    .bienvenida {
+        text-align: center;
+    }
+
+    .cards-banner-one .contenido,
+    .cards-banner-two .contenido {
+        width: 100%;
+        padding: 60px 20px;
+    }
+
+    .footer-links .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
